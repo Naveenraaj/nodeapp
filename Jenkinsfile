@@ -4,8 +4,9 @@ pipeline{
         stage('Docker build'){
             steps{
                 sh '''
-                    docker run hello-world
+                    echo "starting docker build
                 '''
+                docker.build('apprepo')
             }
         }
     }
