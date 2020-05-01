@@ -18,7 +18,9 @@ pipeline{
             }
         }
         stage('ECS service deploy'){
-            sh "aws ecs update-service --cluster nodecluster --service nodeservicetest --force-new-deployment"
+            steps{
+                sh "aws ecs update-service --cluster nodecluster --service nodeservicetest --force-new-deployment"
+            }
         }
     }
 }
